@@ -9,7 +9,6 @@ jobs:
   build-apk:
     runs-on: ubuntu-latest
     
-    # ضمان إلغاء أي مهام قديمة لو بدأت مهمة جديدة لتوفير الوقت والسرعة القصوى
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
@@ -44,7 +43,6 @@ jobs:
           echo "=== Fixing permissions and executing build with error safeguards ==="
           chmod +x gradlew
           
-          # المحاولة الأولى للبناء السريع
           if ./gradlew assembleDebug --parallel --no-daemon; then
               echo "=== Build completed successfully on first try! ==="
           else
@@ -60,4 +58,3 @@ jobs:
           path: |
             pojav_src/**/build/outputs/apk/**/*.apk
           if-no-files-found: error
-
