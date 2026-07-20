@@ -8,6 +8,11 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    
+    # ضمان إلغاء أي مهام قديمة لو بدأت مهمة جديدة لتوفير الوقت والسرعة القصوى
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout Repository
@@ -18,19 +23,41 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: 'gradle'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Clone and Build PojavLauncher
+      - name: Clone and Build PojavLauncher (Self-Healing Mode)
         run: |
+          echo "=== Cloning official PojavLauncher source ==="
           git clone --depth 1 https://github.com/PojavLauncherTeam/PojavLauncher.git pojav_src
+          
           cd pojav_src
+          
+          echo "=== Injecting speed and stability optimizations ==="
+          mkdir -p gradle
+          echo "org.gradle.daemon=false" >> gradle.properties
+          echo "org.gradle.parallel=true" >> gradle.properties
+          echo "org.gradle.workers.max=4" >> gradle.properties
+          
+          echo "=== Fixing permissions and executing build with error safeguards ==="
           chmod +x gradlew
-          ./gradlew assembleDebug
+          
+          # المحاولة الأولى للبناء السريع
+          if ./gradlew assembleDebug --parallel --no-daemon; then
+              echo "=== Build completed successfully on first try! ==="
+          else
+              echo "=== First attempt failed, attempting self-healing cleanup and retry ==="
+              ./gradlew clean
+              ./gradlew assembleDebug --parallel --no-daemon --refresh-dependencies
+          fi
 
-      - name: Upload APK Artifact
+      - name: Upload APK Artifact (Universal Wildcard)
         uses: actions/upload-artifact@v4
         with:
           name: Yousuf-Launcher-APK
-          path: pojav_src/app/build/outputs/apk/debug/app-debug.apk
+          path: |
+            pojav_src/**/build/outputs/apk/**/*.apk
+          if-no-files-found: error
+
