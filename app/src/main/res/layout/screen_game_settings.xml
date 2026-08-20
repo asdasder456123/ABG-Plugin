@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#071017">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:text="‹     إعدادات اللعبة"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="العالم"
+            android:textColor="#AAAAAA"
+            android:paddingTop="8dp"/>
+
+        <EditText
+            android:id="@+id/edtWorldName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:hint="اسم العالم"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#777777"
+            android:singleLine="true"
+            android:background="@drawable/bg_dark_card"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="وضع اللعب"
+            android:textColor="#AAAAAA"/>
+
+        <Spinner
+            android:id="@+id/spnGameMode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_dark_card"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="الصعوبة"
+            android:textColor="#AAAAAA"/>
+
+        <Spinner
+            android:id="@+id/spnDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_dark_card"/>
+
+        <Switch
+            android:id="@+id/switchAllowCheats"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="السماح بالغش"
+            android:textColor="#FFFFFF"/>
+
+        <Switch
+            android:id="@+id/switchShowSettings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="عرض الإعدادات"
+            android:textColor="#FFFFFF"/>
+
+        <Switch
+            android:id="@+id/switchSaveExit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="حفظ الإعدادات عند الخروج"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnSaveGameSettings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:text="حفظ"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF6F00"/>
+    </LinearLayout>
+</ScrollView>

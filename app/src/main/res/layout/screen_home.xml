@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#071017"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="ABG"
+            android:textColor="#FF6F00"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/bg_dark_card"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABGMC"
+                android:textColor="#FF6F00"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Launcher"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="▶"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="#8FA8FF"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="⋮"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="bottom"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_launcher_banner">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABGMC"
+            android:textColor="#FF6F00"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minecraft Launcher"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="الحساب"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/homeAccount"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_dark_card">
+
+        <TextView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="♙"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:text="تغيير الحساب"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btnSelectAccount"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:text="اختيار الحساب"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:backgroundTint="#FF6F00"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="الإصدار"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/homeVersion"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_dark_card">
+
+        <TextView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="■"
+            android:textColor="#65A30D"
+            android:textSize="22sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minecraft 1.20.1"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Release"
+                android:textColor="#FF6F00"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="إعدادات اللعبة"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/homeGameSettings"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_dark_card">
+
+        <TextView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="▣"
+            android:textColor="#AAAAAA"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.20.1"
+                android:textColor="#888888"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="7dp"
+        android:text="▶  تشغيل"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF6F00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="#101820">
+
+        <TextView
+            android:id="@+id/navMods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🧩\nالمودات"
+            android:textColor="#FF6F00"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/navSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="⚙\nالإعدادات"
+            android:textColor="#888888"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/navNews"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="▤\nالأخبار"
+            android:textColor="#888888"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/navAbout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ⓘ\nعن التطبيق"
+            android:textColor="#888888"
+            android:textSize="10sp"/>
+    </LinearLayout>
+
+</LinearLayout>

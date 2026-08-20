@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#071017">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="‹     إعدادات التحكم"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="طريقة التحكم"
+        android:textColor="#AAAAAA"/>
+
+    <Spinner
+        android:id="@+id/spnTouchType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_dark_card"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="حجم الأزرار"
+        android:textColor="#FFFFFF"/>
+
+    <SeekBar
+        android:id="@+id/sbBtnSize"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:max="100"
+        android:progress="100"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="شفافية الأزرار"
+        android:textColor="#FFFFFF"/>
+
+    <SeekBar
+        android:id="@+id/sbBtnOpacity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:max="100"
+        android:progress="80"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="تبديل الاتجاهات"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnSaveControl"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:text="حفظ"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF6F00"/>
+
+</LinearLayout>

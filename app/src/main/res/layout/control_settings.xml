@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="إعدادات التحكم"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/spnTouchType"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="حجم الأزرار"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/sbBtnSize"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="شفافية الأزرار"
+            android:textColor="#FFFFFF"
+            android:gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/sbBtnOpacity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+        <Switch
+            android:id="@+id/switchDirections"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="تبديل الاتجاهات"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnSaveControls"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FF6F00"
+            android:text="حفظ"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</ScrollView>

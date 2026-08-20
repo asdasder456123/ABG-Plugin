@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="إعدادات الأداء"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"/>
+
+    <Spinner
+        android:id="@+id/spnRam"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spnFps"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:text="استخدام التسريع (OpenGL)"
+        android:textColor="#FFFFFF"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="تحسين الأداء"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="عدد خيوط المعالجة"
+        android:textColor="#AAAAAA"
+        android:gravity="center_vertical"/>
+
+    <SeekBar
+        android:id="@+id/sbThreads"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+    <Button
+        android:id="@+id/btnSavePerformance"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FF6F00"
+        android:text="حفظ"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
